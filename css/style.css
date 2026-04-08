@@ -198,6 +198,11 @@ h4 { font-size: 1.125rem; }
   letter-spacing: -0.02em;
 }
 
+.logo-img {
+  height: 44px;
+  width: auto;
+}
+
 .logo-icon {
   width: 36px;
   height: 36px;

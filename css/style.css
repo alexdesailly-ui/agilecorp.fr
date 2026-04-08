@@ -8,9 +8,9 @@
   --color-primary: #0B1D32;
   --color-primary-light: #132D4A;
   --color-secondary: #1A3A5C;
-  --color-accent: #C9A84C;
-  --color-accent-light: #D4B96A;
-  --color-accent-dark: #A8882E;
+  --color-accent: #C0392B;
+  --color-accent-light: #D94F42;
+  --color-accent-dark: #A02E23;
   --color-white: #FFFFFF;
   --color-off-white: #F7F8FA;
   --color-light-gray: #E8ECF1;
@@ -117,7 +117,7 @@ h4 { font-size: 1.125rem; }
 
 .btn-primary {
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 .btn-primary:hover {
   background: var(--color-accent-light);
@@ -208,7 +208,7 @@ h4 { font-size: 1.125rem; }
   justify-content: center;
   font-weight: 900;
   font-size: 1rem;
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .nav-links {
@@ -1235,7 +1235,7 @@ h4 { font-size: 1.125rem; }
 
 .footer-social a:hover {
   background: var(--color-accent);
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 /* ============================================

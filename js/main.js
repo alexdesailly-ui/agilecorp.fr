@@ -102,14 +102,32 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      const prenom = document.getElementById('prenom').value;
+      const nom = document.getElementById('nom').value;
+      const email = document.getElementById('email').value;
+      const telephone = document.getElementById('telephone').value;
+      const societe = document.getElementById('societe').value;
+      const objet = document.getElementById('objet').value;
+      const message = document.getElementById('message').value;
+
+      const subject = encodeURIComponent('[AgileCorp] ' + objet + ' - ' + prenom + ' ' + nom);
+      const body = encodeURIComponent(
+        'Nom : ' + prenom + ' ' + nom + '\n' +
+        'Email : ' + email + '\n' +
+        'Telephone : ' + telephone + '\n' +
+        'Societe : ' + societe + '\n' +
+        'Objet : ' + objet + '\n\n' +
+        'Message :\n' + message
+      );
+      window.location.href = 'mailto:alexandre@agilecorp.fr?subject=' + subject + '&body=' + body;
+
       const btn = contactForm.querySelector('.btn');
       const originalText = btn.textContent;
-      btn.textContent = 'Message envoy\u00e9 !';
+      btn.textContent = 'Redirection vers votre messagerie...';
       btn.style.background = '#2ecc71';
       setTimeout(() => {
         btn.textContent = originalText;
         btn.style.background = '';
-        contactForm.reset();
       }, 3000);
     });
   }

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Retour de mission : reprendre une recette d&eacute;sorganis&eacute;e sur un projet de refonte SI bancaire. AMOA, QA, strat&eacute;gie de tests.">
+  <title>Reprendre une recette qui part en vrille | AgileCorp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/article.css">
+  <link rel="icon" type="image/png" href="../logo-agile-corp.png">
+</head>
+<body>
+
+  <header class="header header--solid">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../logo-agile-corp-blanc-baseline.png" alt="AgileCorp" class="logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html#expertise">Expertise</a>
+        <a href="../index.html#terrain">Terrain</a>
+        <a href="../index.html#contact" class="btn btn-primary btn-sm nav-cta">Parlons-en</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="container">
+
+      <a href="../index.html#terrain" class="article-back">&larr; Retours de terrain</a>
+
+      <div class="article-header">
+        <div class="insight-tag">AMOA / QA</div>
+        <h1>Reprendre une recette qui part en vrille sur un projet bancaire</h1>
+        <div class="article-meta">
+          <span>Secteur : Banque</span>
+          <span>Dur&eacute;e : 4 mois</span>
+          <span>Expertise : AMOA, QA, ISTQB</span>
+        </div>
+      </div>
+
+      <div class="article-body">
+
+        <div class="article-section">
+          <h2>Le contexte</h2>
+          <p>Un grand groupe bancaire lance la refonte de son syst&egrave;me d&rsquo;information de gestion des comptes. Le projet mobilise une vingtaine de personnes c&ocirc;t&eacute; MOE, un int&eacute;grateur externe et plusieurs &eacute;quipes m&eacute;tier. Le Go-Live est pr&eacute;vu dans 5 mois.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Le probl&egrave;me</h2>
+          <p>Quand on arrive, la situation est tendue. La recette a d&eacute;marr&eacute; depuis 3 semaines et c&rsquo;est le chaos :</p>
+          <ul>
+            <li>Pas de strat&eacute;gie de tests formalis&eacute;e. Chaque testeur fait &agrave; sa mani&egrave;re.</li>
+            <li>Les sp&eacute;cifications fonctionnelles sont incompl&egrave;tes &mdash; il manque des r&egrave;gles de gestion enti&egrave;res.</li>
+            <li>Les anomalies sont remont&eacute;es par mail, par t&eacute;l&eacute;phone, parfois sur Post-it. Aucun suivi centralis&eacute;.</li>
+            <li>Le Go-Live a d&eacute;j&agrave; &eacute;t&eacute; repouss&eacute; deux fois. La direction g&eacute;n&eacute;rale commence &agrave; poser des questions.</li>
+          </ul>
+          <p>Le chef de projet c&ocirc;t&eacute; MOA est comp&eacute;tent mais submerg&eacute;. Il g&egrave;re les specs, la recette, les comit&eacute;s et la relation m&eacute;tier en m&ecirc;me temps. Personne n&rsquo;a de visibilit&eacute; sur l&rsquo;&eacute;tat r&eacute;el de la qualit&eacute;.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Notre intervention</h2>
+          <p>On est intervenu &agrave; deux : un profil AMOA pour reprendre les specs, un profil QA certifi&eacute; ISTQB pour structurer la recette.</p>
+
+          <h3>Semaine 1-2 : &eacute;tat des lieux</h3>
+          <p>On a commenc&eacute; par tout poser &agrave; plat. Inventaire des specs existantes, identification des trous. Recensement de toutes les anomalies en cours (on en a retrouv&eacute; 47 &eacute;parpill&eacute;es entre mails et fichiers Excel). Cartographie des cas de tests existants &mdash; il y en avait 120, mal structur&eacute;s, non prioris&eacute;s.</p>
+
+          <h3>Semaine 3-4 : restructuration</h3>
+          <p>On a produit un plan de tests complet, align&eacute; sur les processus m&eacute;tier. 380 cas de tests, class&eacute;s par criticit&eacute;. Un outil de suivi d&rsquo;anomalies unique, avec des r&egrave;gles de qualification claires (bloquant, majeur, mineur). Chaque anomalie a un responsable, un d&eacute;lai, un statut.</p>
+          <p>C&ocirc;t&eacute; AMOA, on a repris les specs fonctionnelles des 3 modules les plus critiques. 45 pages de specs compl&eacute;t&eacute;es ou r&eacute;&eacute;crites, valid&eacute;es avec le m&eacute;tier.</p>
+
+          <h3>Mois 2-4 : ex&eacute;cution et pilotage</h3>
+          <p>Ex&eacute;cution syst&eacute;matique du plan de tests. Comit&eacute; qualit&eacute; hebdomadaire avec indicateurs simples : taux d&rsquo;ex&eacute;cution, taux de r&eacute;ussite, anomalies ouvertes par criticit&eacute;, tendance. La direction avait enfin un tableau de bord lisible.</p>
+          <p>On a &eacute;galement mis en place des tests de non-r&eacute;gression &agrave; chaque livraison de correctif, ce qui n&rsquo;existait pas avant.</p>
+        </div>
+
+        <div class="article-section">
+          <h2>Les r&eacute;sultats</h2>
+          <div class="article-results">
+            <div class="article-result">
+              <div class="article-result-value">-60%</div>
+              <div class="article-result-label">Anomalies en production par rapport aux projets pr&eacute;c&eacute;dents</div>
+            </div>
+            <div class="article-result">
+              <div class="article-result-value">380</div>
+              <div class="article-result-label">Cas de tests ex&eacute;cut&eacute;s &agrave; 100%</div>
+            </div>
+            <div class="article-result">
+              <div class="article-result-value">On time</div>
+              <div class="article-result-label">Go-Live respect&eacute; &mdash; pas de troisi&egrave;me report</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-section">
+          <h2>Ce qu&rsquo;on en retient</h2>
+          <p>La recette, ce n&rsquo;est pas &laquo;&nbsp;tester&nbsp;&raquo;. C&rsquo;est piloter la qualit&eacute;. Sans strat&eacute;gie, sans suivi, sans r&ocirc;les clairs, m&ecirc;me une bonne &eacute;quipe de testeurs ne peut rien produire de fiable. Le probl&egrave;me n&rsquo;&eacute;tait pas technique &mdash; il &eacute;tait organisationnel.</p>
+          <p>Et les specs incompl&egrave;tes, c&rsquo;est un classique. On ne peut pas recetter ce qui n&rsquo;est pas sp&eacute;cifi&eacute;. Reprendre les specs en parall&egrave;le de la recette, c&rsquo;est contre-intuitif, mais c&rsquo;est souvent la seule option quand on arrive en cours de route.</p>
+        </div>
+
+      </div>
+
+      <div class="article-cta">
+        <h3>Un projet de recette &agrave; structurer ?</h3>
+        <p>On en a vu d&rsquo;autres. Parlons-en.</p>
+        <a href="../index.html#contact" class="btn btn-primary btn-arrow">&Eacute;changer avec un expert</a>
+      </div>
+
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 AgileCorp. Tous droits r&eacute;serv&eacute;s.</p>
+        <div class="footer-social">
+          <a href="https://fr.linkedin.com/company/ades-it" target="_blank" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

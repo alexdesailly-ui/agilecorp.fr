@@ -749,6 +749,84 @@ h4 { font-size: 1.125rem; }
 }
 
 /* ============================================
+   RETOURS DE TERRAIN (INSIGHTS)
+   ============================================ */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.insight-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  position: relative;
+}
+
+.insight-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.insight-tag {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  align-self: flex-start;
+}
+
+.insight-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.insight-card p {
+  font-size: 0.9rem;
+  color: var(--color-dark-gray);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.insight-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 0.75rem;
+  color: var(--color-mid-gray);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.insight-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  transition: var(--transition);
+}
+
+.insight-card:hover .insight-link {
+  color: var(--color-accent-dark);
+}
+
+/* ============================================
    METHODOLOGY
    ============================================ */
 .method-steps {
@@ -1299,6 +1377,7 @@ h4 { font-size: 1.125rem; }
   .method-steps::before { display: none; }
   .diff-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .insights-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1328,6 +1407,7 @@ h4 { font-size: 1.125rem; }
   .cases-grid { grid-template-columns: 1fr; }
   .sectors-grid { grid-template-columns: repeat(2, 1fr); }
   .diff-grid { grid-template-columns: 1fr; }
+  .insights-grid { grid-template-columns: 1fr; }
   .partner-content { grid-template-columns: 1fr; }
   .careers-content { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }

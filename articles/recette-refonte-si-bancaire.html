@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Retour de mission : reprendre une recette d&eacute;sorganis&eacute;e sur un projet de refonte SI bancaire. AMOA, QA, strat&eacute;gie de tests.">
-  <title>Reprendre une recette qui part en vrille | AgileCorp</title>
+  <meta name="description" content="Retour de mission : quand la recette part en vrille et que les bugs sont trackés par Post-it. Comment on a remis de l'ordre.">
+  <title>Des anomalies par Post-it &mdash; retour de mission QA | AgileCorp</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -37,78 +37,237 @@
 
       <div class="article-header">
         <div class="insight-tag">AMOA / QA</div>
-        <h1>Reprendre une recette qui part en vrille sur un projet bancaire</h1>
+        <h1>Le jour o&ugrave; on a h&eacute;rit&eacute; d&rsquo;une recette avec des anomalies remont&eacute;es par Post-it</h1>
         <div class="article-meta">
-          <span>Secteur : Banque</span>
-          <span>Dur&eacute;e : 4 mois</span>
-          <span>Expertise : AMOA, QA, ISTQB</span>
+          <span>Banque</span>
+          <span>4 mois</span>
+          <span>AMOA &bull; QA &bull; ISTQB</span>
         </div>
       </div>
 
       <div class="article-body">
 
         <div class="article-section">
-          <h2>Le contexte</h2>
-          <p>Un grand groupe bancaire lance la refonte de son syst&egrave;me d&rsquo;information de gestion des comptes. Le projet mobilise une vingtaine de personnes c&ocirc;t&eacute; MOE, un int&eacute;grateur externe et plusieurs &eacute;quipes m&eacute;tier. Le Go-Live est pr&eacute;vu dans 5 mois.</p>
-        </div>
-
-        <div class="article-section">
-          <h2>Le probl&egrave;me</h2>
-          <p>Quand on arrive, la situation est tendue. La recette a d&eacute;marr&eacute; depuis 3 semaines et c&rsquo;est le chaos :</p>
+          <h2>La situation quand on d&eacute;barque</h2>
+          <p>Un gros projet de refonte SI dans une banque. Vingt personnes c&ocirc;t&eacute; dev, un int&eacute;grateur, plusieurs &eacute;quipes m&eacute;tier. Go-Live dans 5 mois. Sur le papier, &ccedil;a avance.</p>
+          <p>Dans la vraie vie, c&rsquo;est le bazar. La recette a d&eacute;marr&eacute; depuis 3 semaines et voil&agrave; ce qu&rsquo;on trouve en arrivant :</p>
           <ul>
-            <li>Pas de strat&eacute;gie de tests formalis&eacute;e. Chaque testeur fait &agrave; sa mani&egrave;re.</li>
-            <li>Les sp&eacute;cifications fonctionnelles sont incompl&egrave;tes &mdash; il manque des r&egrave;gles de gestion enti&egrave;res.</li>
-            <li>Les anomalies sont remont&eacute;es par mail, par t&eacute;l&eacute;phone, parfois sur Post-it. Aucun suivi centralis&eacute;.</li>
-            <li>Le Go-Live a d&eacute;j&agrave; &eacute;t&eacute; repouss&eacute; deux fois. La direction g&eacute;n&eacute;rale commence &agrave; poser des questions.</li>
+            <li>Les testeurs font ce qu&rsquo;ils peuvent, chacun &agrave; sa sauce. Certains testent &laquo;&nbsp;au feeling&nbsp;&raquo;, d&rsquo;autres suivent des specs qui datent de 6 mois.</li>
+            <li>Les anomalies sont remont&eacute;es par mail, par Teams, et oui &mdash; parfois sur Post-it coll&eacute;s sur l&rsquo;&eacute;cran du d&eacute;veloppeur.</li>
+            <li>Personne ne sait combien il y a de bugs ouverts. Ni lesquels sont bloquants.</li>
+            <li>Le Go-Live a d&eacute;j&agrave; &eacute;t&eacute; repouss&eacute; deux fois. Le sponsor commence &agrave; perdre patience.</li>
           </ul>
-          <p>Le chef de projet c&ocirc;t&eacute; MOA est comp&eacute;tent mais submerg&eacute;. Il g&egrave;re les specs, la recette, les comit&eacute;s et la relation m&eacute;tier en m&ecirc;me temps. Personne n&rsquo;a de visibilit&eacute; sur l&rsquo;&eacute;tat r&eacute;el de la qualit&eacute;.</p>
+          <p>Le chef de projet MOA est comp&eacute;tent, mais il fait tout en m&ecirc;me temps : les specs, la recette, les comit&eacute;s, la relation m&eacute;tier. Il court partout et personne n&rsquo;a de visibilit&eacute; sur rien.</p>
         </div>
 
         <div class="article-section">
-          <h2>Notre intervention</h2>
-          <p>On est intervenu &agrave; deux : un profil AMOA pour reprendre les specs, un profil QA certifi&eacute; ISTQB pour structurer la recette.</p>
+          <h2>Ce qu&rsquo;on a fait concr&egrave;tement</h2>
+          <p>On est arriv&eacute; &agrave; deux. Un profil AMOA pour reprendre les specs, un profil QA (certifi&eacute; ISTQB) pour structurer la recette. Pas de grande th&eacute;orie, on a boss&eacute;.</p>
 
-          <h3>Semaine 1-2 : &eacute;tat des lieux</h3>
-          <p>On a commenc&eacute; par tout poser &agrave; plat. Inventaire des specs existantes, identification des trous. Recensement de toutes les anomalies en cours (on en a retrouv&eacute; 47 &eacute;parpill&eacute;es entre mails et fichiers Excel). Cartographie des cas de tests existants &mdash; il y en avait 120, mal structur&eacute;s, non prioris&eacute;s.</p>
+          <h3>Premi&egrave;re semaine : on fait l&rsquo;inventaire</h3>
+          <p>On a recens&eacute; toutes les anomalies qui tra&icirc;naient &mdash; dans les mails, les fichiers Excel partag&eacute;s, les conversations Teams. On en a retrouv&eacute; 47, &eacute;parpill&eacute;es partout. Certaines &eacute;taient des doublons, d&rsquo;autres &eacute;taient d&eacute;j&agrave; corrig&eacute;es mais personne n&rsquo;avait mis &agrave; jour le statut. On a tout centralis&eacute; dans un seul outil avec des r&egrave;gles simples : une anomalie = un ticket, un niveau de criticit&eacute;, un responsable.</p>
+        </div>
 
-          <h3>Semaine 3-4 : restructuration</h3>
-          <p>On a produit un plan de tests complet, align&eacute; sur les processus m&eacute;tier. 380 cas de tests, class&eacute;s par criticit&eacute;. Un outil de suivi d&rsquo;anomalies unique, avec des r&egrave;gles de qualification claires (bloquant, majeur, mineur). Chaque anomalie a un responsable, un d&eacute;lai, un statut.</p>
-          <p>C&ocirc;t&eacute; AMOA, on a repris les specs fonctionnelles des 3 modules les plus critiques. 45 pages de specs compl&eacute;t&eacute;es ou r&eacute;&eacute;crites, valid&eacute;es avec le m&eacute;tier.</p>
-
-          <h3>Mois 2-4 : ex&eacute;cution et pilotage</h3>
-          <p>Ex&eacute;cution syst&eacute;matique du plan de tests. Comit&eacute; qualit&eacute; hebdomadaire avec indicateurs simples : taux d&rsquo;ex&eacute;cution, taux de r&eacute;ussite, anomalies ouvertes par criticit&eacute;, tendance. La direction avait enfin un tableau de bord lisible.</p>
-          <p>On a &eacute;galement mis en place des tests de non-r&eacute;gression &agrave; chaque livraison de correctif, ce qui n&rsquo;existait pas avant.</p>
+        <div class="deliverable">
+          <div class="deliverable-header">Extrait &mdash; Suivi des anomalies (anonymis&eacute;)</div>
+          <div class="deliverable-body">
+            <table class="mock-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Module</th>
+                  <th>Anomalie</th>
+                  <th>Criticit&eacute;</th>
+                  <th>Statut</th>
+                  <th>Resp.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ANO-012</td>
+                  <td>Gestion comptes</td>
+                  <td>Calcul int&eacute;r&ecirc;ts KO sur taux n&eacute;gatif</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>Bloquant</td>
+                  <td><span class="status-badge status-badge--red">Ouvert</span></td>
+                  <td>MOE - J.D.</td>
+                </tr>
+                <tr>
+                  <td>ANO-015</td>
+                  <td>Virements</td>
+                  <td>IBAN non valid&eacute; format SEPA</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>Bloquant</td>
+                  <td><span class="status-badge status-badge--orange">En cours</span></td>
+                  <td>MOE - S.M.</td>
+                </tr>
+                <tr>
+                  <td>ANO-018</td>
+                  <td>Reporting</td>
+                  <td>Export CSV tronqu&eacute; apr&egrave;s 10k lignes</td>
+                  <td><span class="prio-dot prio-dot--high"></span>Majeur</td>
+                  <td><span class="status-badge status-badge--green">Corrig&eacute;</span></td>
+                  <td>MOE - P.L.</td>
+                </tr>
+                <tr>
+                  <td>ANO-023</td>
+                  <td>Gestion comptes</td>
+                  <td>Libell&eacute; op&eacute;ration coup&eacute; &agrave; 30 caract&egrave;res</td>
+                  <td><span class="prio-dot prio-dot--medium"></span>Mineur</td>
+                  <td><span class="status-badge status-badge--green">Corrig&eacute;</span></td>
+                  <td>MOE - J.D.</td>
+                </tr>
+                <tr>
+                  <td>ANO-031</td>
+                  <td>Auth</td>
+                  <td>Timeout session &agrave; 5 min au lieu de 30</td>
+                  <td><span class="prio-dot prio-dot--high"></span>Majeur</td>
+                  <td><span class="status-badge status-badge--orange">En cours</span></td>
+                  <td>MOE - K.R.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="deliverable-caption">Exemple de notre suivi d'anomalies &mdash; chaque bug a un ID, un responsable, un statut. Fini le Post-it.</div>
         </div>
 
         <div class="article-section">
-          <h2>Les r&eacute;sultats</h2>
+          <h3>Semaine 2-3 : on construit le plan de tests</h3>
+          <p>Il y avait 120 cas de tests, &eacute;crits un peu n&rsquo;importe comment, pas prioris&eacute;s. On a tout repris. On a produit un plan de tests align&eacute; sur les processus m&eacute;tier : 380 cas, class&eacute;s par module et par criticit&eacute;. Chaque cas est li&eacute; &agrave; une exigence fonctionnelle. Si le test passe, on sait que la r&egrave;gle m&eacute;tier est bonne. Si le test &eacute;choue, on sait exactement quelle spec est concern&eacute;e.</p>
+        </div>
+
+        <div class="deliverable">
+          <div class="deliverable-header">Extrait &mdash; Plan de tests (anonymis&eacute;)</div>
+          <div class="deliverable-body">
+            <table class="mock-table">
+              <thead>
+                <tr>
+                  <th>R&eacute;f.</th>
+                  <th>Sc&eacute;nario</th>
+                  <th>Cas de test</th>
+                  <th>Prio</th>
+                  <th>R&eacute;sultat</th>
+                  <th>Lien spec</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CT-101</td>
+                  <td>Ouverture compte</td>
+                  <td>V&eacute;rifier cr&eacute;ation compte PEL avec taux r&eacute;glement&eacute;</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>P1</td>
+                  <td><span class="status-badge status-badge--green">OK</span></td>
+                  <td>SF-2.3.1</td>
+                </tr>
+                <tr>
+                  <td>CT-102</td>
+                  <td>Ouverture compte</td>
+                  <td>Rejet si client interdit bancaire</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>P1</td>
+                  <td><span class="status-badge status-badge--green">OK</span></td>
+                  <td>SF-2.3.4</td>
+                </tr>
+                <tr>
+                  <td>CT-145</td>
+                  <td>Virement SEPA</td>
+                  <td>Virement &gt; plafond journalier = alerte</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>P1</td>
+                  <td><span class="status-badge status-badge--red">KO</span></td>
+                  <td>SF-4.1.2</td>
+                </tr>
+                <tr>
+                  <td>CT-203</td>
+                  <td>Reporting</td>
+                  <td>G&eacute;n&eacute;ration relev&eacute; mensuel PDF</td>
+                  <td><span class="prio-dot prio-dot--medium"></span>P2</td>
+                  <td><span class="status-badge status-badge--green">OK</span></td>
+                  <td>SF-7.2.1</td>
+                </tr>
+                <tr>
+                  <td>CT-267</td>
+                  <td>Cl&ocirc;ture compte</td>
+                  <td>Cl&ocirc;ture avec op&eacute;rations en attente = blocage</td>
+                  <td><span class="prio-dot prio-dot--high"></span>P1</td>
+                  <td><span class="status-badge status-badge--blue">En cours</span></td>
+                  <td>SF-9.1.3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="deliverable-caption">Chaque cas de test est li&eacute; &agrave; une spec fonctionnelle. Quand un test est KO, on sait exactement o&ugrave; regarder.</div>
+        </div>
+
+        <div class="article-section">
+          <h3>En parall&egrave;le : on rebouche les trous dans les specs</h3>
+          <p>C&ocirc;t&eacute; AMOA, on a attaqu&eacute; les 3 modules les plus critiques. Il manquait des r&egrave;gles de gestion enti&egrave;res &mdash; genre &laquo;&nbsp;qu&rsquo;est-ce qui se passe quand le client a un taux n&eacute;gatif ?&nbsp;&raquo; Personne n&rsquo;avait formalis&eacute; le cas. Les d&eacute;veloppeurs avaient bricol&eacute; un truc, le m&eacute;tier d&eacute;couvrait le probl&egrave;me en recette. 45 pages de specs compl&eacute;t&eacute;es ou r&eacute;&eacute;crites, valid&eacute;es avec les &eacute;quipes m&eacute;tier.</p>
+
+          <h3>Mois 2-4 : on d&eacute;roule et on pilote</h3>
+          <p>Ex&eacute;cution syst&eacute;matique du plan de tests. Chaque semaine, un comit&eacute; qualit&eacute; de 30 minutes avec un dashboard simple : combien de tests ex&eacute;cut&eacute;s, combien en succ&egrave;s, combien d&rsquo;anomalies ouvertes par criticit&eacute;. La direction avait enfin un tableau de bord lisible au lieu de &laquo;&nbsp;&ccedil;a avance, on g&egrave;re&nbsp;&raquo;.</p>
+        </div>
+
+        <div class="deliverable">
+          <div class="deliverable-header">Extrait &mdash; Dashboard qualit&eacute; hebdomadaire</div>
+          <div class="deliverable-body">
+            <div class="mock-kpi-row">
+              <div class="mock-kpi">
+                <div class="mock-kpi-value">380</div>
+                <div class="mock-kpi-label">Cas de tests</div>
+              </div>
+              <div class="mock-kpi">
+                <div class="mock-kpi-value">94%</div>
+                <div class="mock-kpi-label">Ex&eacute;cut&eacute;s</div>
+              </div>
+              <div class="mock-kpi">
+                <div class="mock-kpi-value">3</div>
+                <div class="mock-kpi-label">Bloquants ouverts</div>
+              </div>
+              <div class="mock-kpi">
+                <div class="mock-kpi-value">87%</div>
+                <div class="mock-kpi-label">Taux de r&eacute;ussite</div>
+              </div>
+            </div>
+            <div class="mock-chart">
+              <div class="mock-bar-chart">
+                <div class="mock-bar" style="height: 30%; background: #c0392b;"><span class="mock-bar-value">12</span><span class="mock-bar-label">S1</span></div>
+                <div class="mock-bar" style="height: 55%; background: #e67e22;"><span class="mock-bar-value">22</span><span class="mock-bar-label">S2</span></div>
+                <div class="mock-bar" style="height: 85%; background: #e67e22;"><span class="mock-bar-value">34</span><span class="mock-bar-label">S3</span></div>
+                <div class="mock-bar" style="height: 70%; background: #27ae60;"><span class="mock-bar-value">28</span><span class="mock-bar-label">S4</span></div>
+                <div class="mock-bar" style="height: 40%; background: #27ae60;"><span class="mock-bar-value">16</span><span class="mock-bar-label">S5</span></div>
+                <div class="mock-bar" style="height: 20%; background: #27ae60;"><span class="mock-bar-value">8</span><span class="mock-bar-label">S6</span></div>
+                <div class="mock-bar" style="height: 10%; background: #27ae60;"><span class="mock-bar-value">3</span><span class="mock-bar-label">S7</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="deliverable-caption">Le nombre d'anomalies ouvertes par semaine. La courbe descend = on reprend le contr&ocirc;le.</div>
+        </div>
+
+        <div class="article-section">
+          <h2>Le r&eacute;sultat</h2>
           <div class="article-results">
             <div class="article-result">
               <div class="article-result-value">-60%</div>
-              <div class="article-result-label">Anomalies en production par rapport aux projets pr&eacute;c&eacute;dents</div>
+              <div class="article-result-label">Anomalies en prod vs. les projets pr&eacute;c&eacute;dents</div>
             </div>
             <div class="article-result">
-              <div class="article-result-value">380</div>
-              <div class="article-result-label">Cas de tests ex&eacute;cut&eacute;s &agrave; 100%</div>
+              <div class="article-result-value">380/380</div>
+              <div class="article-result-label">Cas de tests ex&eacute;cut&eacute;s</div>
             </div>
             <div class="article-result">
               <div class="article-result-value">On time</div>
-              <div class="article-result-label">Go-Live respect&eacute; &mdash; pas de troisi&egrave;me report</div>
+              <div class="article-result-label">Pas de 3&egrave;me report</div>
             </div>
           </div>
         </div>
 
         <div class="article-section">
-          <h2>Ce qu&rsquo;on en retient</h2>
-          <p>La recette, ce n&rsquo;est pas &laquo;&nbsp;tester&nbsp;&raquo;. C&rsquo;est piloter la qualit&eacute;. Sans strat&eacute;gie, sans suivi, sans r&ocirc;les clairs, m&ecirc;me une bonne &eacute;quipe de testeurs ne peut rien produire de fiable. Le probl&egrave;me n&rsquo;&eacute;tait pas technique &mdash; il &eacute;tait organisationnel.</p>
-          <p>Et les specs incompl&egrave;tes, c&rsquo;est un classique. On ne peut pas recetter ce qui n&rsquo;est pas sp&eacute;cifi&eacute;. Reprendre les specs en parall&egrave;le de la recette, c&rsquo;est contre-intuitif, mais c&rsquo;est souvent la seule option quand on arrive en cours de route.</p>
+          <h2>Ce qu&rsquo;on en retient (pour de vrai)</h2>
+          <p>La recette, c&rsquo;est pas &laquo;&nbsp;tester&nbsp;&raquo;. C&rsquo;est piloter la qualit&eacute;. Si t&rsquo;as pas de plan de tests, pas de suivi des anomalies, pas de r&ocirc;les clairs, m&ecirc;me les meilleurs testeurs du monde ne peuvent rien faire. Le probl&egrave;me n&rsquo;&eacute;tait pas technique &mdash; il &eacute;tait organisationnel.</p>
+          <p>Et les specs &agrave; trous, c&rsquo;est le mal absolu. On ne peut pas recetter ce qui n&rsquo;est pas sp&eacute;cifi&eacute;. &laquo;&nbsp;Mais c&rsquo;&eacute;tait &eacute;vident&nbsp;&raquo; &mdash; non, c&rsquo;est jamais &eacute;vident. Si c&rsquo;est pas &eacute;crit, c&rsquo;est pas sp&eacute;cifi&eacute;.</p>
         </div>
 
       </div>
 
       <div class="article-cta">
-        <h3>Un projet de recette &agrave; structurer ?</h3>
-        <p>On en a vu d&rsquo;autres. Parlons-en.</p>
+        <h3>Votre recette part en cacahu&egrave;te ?</h3>
+        <p>On a vu pire. Vraiment. Parlons-en.</p>
         <a href="../index.html#contact" class="btn btn-primary btn-arrow">&Eacute;changer avec un expert</a>
       </div>
 

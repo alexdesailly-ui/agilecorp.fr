@@ -135,10 +135,233 @@
   margin-bottom: 24px;
 }
 
+/* ============================================
+   DELIVERABLE MOCKUPS
+   ============================================ */
+.deliverable {
+  margin: 32px 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-light-gray);
+}
+
+.deliverable-header {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.deliverable-header::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
+.deliverable-caption {
+  background: var(--color-off-white);
+  padding: 10px 20px;
+  font-size: 0.75rem;
+  color: var(--color-mid-gray);
+  font-style: italic;
+  border-top: 1px solid var(--color-light-gray);
+}
+
+.deliverable-body {
+  padding: 0;
+  background: var(--color-white);
+  overflow-x: auto;
+}
+
+.mock-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.mock-table th {
+  background: var(--color-off-white);
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-light-gray);
+  white-space: nowrap;
+}
+
+.mock-table td {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--color-light-gray);
+  color: var(--color-text);
+  vertical-align: top;
+}
+
+.mock-table tr:last-child td {
+  border-bottom: none;
+}
+
+.mock-table tr:hover td {
+  background: #f0f4f8;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.status-badge--red { background: #fde8e8; color: #c0392b; }
+.status-badge--orange { background: #fef3e2; color: #d35400; }
+.status-badge--green { background: #e8f5e9; color: #27ae60; }
+.status-badge--blue { background: #e3f2fd; color: #2980b9; }
+.status-badge--gray { background: #eceff1; color: #607d8b; }
+
+.prio-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.prio-dot--critical { background: #c0392b; }
+.prio-dot--high { background: #e67e22; }
+.prio-dot--medium { background: #f1c40f; }
+.prio-dot--low { background: #27ae60; }
+
+.mock-chart {
+  padding: 24px 20px;
+}
+
+.mock-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 120px;
+  padding: 0 0 24px;
+  border-bottom: 2px solid var(--color-light-gray);
+  position: relative;
+}
+
+.mock-bar {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  min-width: 30px;
+  transition: var(--transition);
+}
+
+.mock-bar-label {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  color: var(--color-mid-gray);
+  white-space: nowrap;
+}
+
+.mock-bar-value {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.mock-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.mock-kpi {
+  text-align: center;
+  padding: 16px 8px;
+  background: var(--color-off-white);
+  border-radius: var(--radius-sm);
+}
+
+.mock-kpi-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.mock-kpi-label {
+  font-size: 0.65rem;
+  color: var(--color-mid-gray);
+  margin-top: 2px;
+}
+
+.mock-kanban {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+}
+
+.mock-kanban-col {
+  background: var(--color-off-white);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.mock-kanban-col h5 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-mid-gray);
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.mock-kanban-card {
+  background: var(--color-white);
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-size: 0.7rem;
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  border-left: 3px solid var(--color-light-gray);
+}
+
+.mock-kanban-card--accent {
+  border-left-color: var(--color-accent);
+}
+
+.mock-kanban-card--green {
+  border-left-color: #27ae60;
+}
+
+.mock-kanban-card--orange {
+  border-left-color: #e67e22;
+}
+
 @media (max-width: 768px) {
   .article { padding: 120px 0 60px; }
   .article-header h1 { font-size: 1.5rem; }
   .article-results { grid-template-columns: 1fr; }
   .article-cta { padding: 32px 24px; }
   .article-meta { flex-direction: column; gap: 8px; }
+  .mock-kpi-row { grid-template-columns: repeat(2, 1fr); }
+  .mock-kanban { grid-template-columns: repeat(2, 1fr); }
 }

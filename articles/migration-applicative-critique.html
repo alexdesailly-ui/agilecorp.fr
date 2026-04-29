@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Retour de mission : 15 parties prenantes, une date non négociable, et personne pour coordonner. Comment on a livré une migration critique à l'heure.">
-  <title>15 parties prenantes, z&eacute;ro coordination &mdash; retour de mission pilotage | AgileCorp</title>
+  <meta name="description" content="Retour de mission : 15 parties prenantes, une date non n&eacute;gociable, personne pour coordonner.">
+  <title>15 parties prenantes, z&eacute;ro coordination | AgileCorp</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -49,110 +49,152 @@
 
         <div class="article-section">
           <h2>Le tableau</h2>
-          <p>Une banque r&eacute;gionale doit migrer son appli de gestion des cr&eacute;dits. L&rsquo;appli est utilis&eacute;e tous les jours par 400 conseillers dans 80 agences. Elle traite 2 000 dossiers de cr&eacute;dit par semaine. C&rsquo;est du critique &mdash; si &ccedil;a plante, les agences ne peuvent plus travailler.</p>
-          <p>La migration est impos&eacute;e par la fin de support de l&rsquo;ancienne plateforme. La date, c&rsquo;est l&rsquo;&eacute;diteur qui la fixe. Non n&eacute;gociable.</p>
+          <p>Une banque r&eacute;gionale doit migrer son appli de gestion des cr&eacute;dits. 400 conseillers dans 80 agences, 2 000 dossiers par semaine. C&rsquo;est du critique &mdash; si &ccedil;a plante, les agences ne peuvent plus travailler.</p>
+          <p>La date de bascule est fix&eacute;e par l&rsquo;&eacute;diteur. Non n&eacute;gociable.</p>
         </div>
 
-        <div class="article-section">
-          <h2>Le probl&egrave;me (spoiler : c&rsquo;est pas technique)</h2>
-          <p>Le projet implique 15 parties prenantes : l&rsquo;&eacute;diteur, l&rsquo;h&eacute;bergeur, l&rsquo;infra, l&rsquo;&eacute;quipe applicative, la MOA, le m&eacute;tier, la conformit&eacute;, la s&eacute;curit&eacute; SI&hellip; Chacun a ses contraintes, ses d&eacute;lais, ses priorit&eacute;s.</p>
-          <p>Et le vrai souci :</p>
-          <ul>
-            <li><strong>Pas de chef de projet d&eacute;di&eacute;</strong>. Le DSI adjoint cumule ce r&ocirc;le avec tout le reste. Il fait ce qu&rsquo;il peut mais il n&rsquo;a pas le temps.</li>
-            <li><strong>Chaque &eacute;quipe a son propre planning</strong>. Le planning de l&rsquo;infra ne colle pas avec celui de l&rsquo;&eacute;quipe applicative. Celui de la s&eacute;curit&eacute; est ind&eacute;pendant des deux. Personne n&rsquo;a la vue d&rsquo;ensemble.</li>
-            <li><strong>Les risques ne sont pas formalis&eacute;s</strong>. Tout le monde sent qu&rsquo;il y a des risques, personne ne les a list&eacute;s. Genre &laquo;&nbsp;et si l&rsquo;h&eacute;bergeur est en retard sur la mise &agrave; dispo de l&rsquo;environnement de recette ?&nbsp;&raquo;. Personne n&rsquo;y a pens&eacute;.</li>
-            <li><strong>La direction navigue &agrave; vue</strong>. Elle demande &laquo;&nbsp;o&ugrave; on en est ?&nbsp;&raquo;, elle re&ccedil;oit &laquo;&nbsp;&ccedil;a avance&nbsp;&raquo;.</li>
-          </ul>
+        <div class="callout callout--danger">
+          <strong>Ce qu&rsquo;on trouve en arrivant :</strong>
+          15 parties prenantes (DSI, &eacute;diteur, h&eacute;bergeur, infra, s&eacute;cu, MOA, m&eacute;tier, conformit&eacute;...). Chaque &eacute;quipe a son propre planning. Aucun ne colle avec les autres. Personne n&rsquo;a la vue d&rsquo;ensemble.
         </div>
 
-        <div class="article-section">
-          <h2>Ce qu&rsquo;on a pos&eacute;</h2>
+        <div class="before-after">
+          <div class="before-col">
+            <h4>&#9888; Quand on arrive</h4>
+            <ul>
+              <li>Pas de chef de projet d&eacute;di&eacute;</li>
+              <li>Chaque &eacute;quipe a son planning isol&eacute;</li>
+              <li>Risques non formalis&eacute;s</li>
+              <li>Direction sans visibilit&eacute;</li>
+              <li>3 jalons incompatibles</li>
+            </ul>
+          </div>
+          <div class="after-col">
+            <h4>&#10003; Quand on part</h4>
+            <ul>
+              <li>Pilotage d&eacute;di&eacute; &agrave; 100%</li>
+              <li>Planning unifi&eacute;, 23 d&eacute;pendances mapp&eacute;es</li>
+              <li>14 risques identifi&eacute;s et mitig&eacute;s</li>
+              <li>Dashboard 1 page / semaine</li>
+              <li>Go-Live on time, 0 incident</li>
+            </ul>
+          </div>
+        </div>
 
-          <h3>Jour 1 : le planning qui dit la v&eacute;rit&eacute;</h3>
-          <p>On a construit un macro-planning unifi&eacute;. Toutes les &eacute;quipes, toutes les d&eacute;pendances, sur un seul doc. On a identifi&eacute; 8 jalons critiques et 23 d&eacute;pendances inter-&eacute;quipes.</p>
-          <p>Et l&agrave;, tout le monde a vu ce que personne ne voulait dire tout haut : 3 jalons &eacute;taient incompatibles. L&rsquo;infra pr&eacute;voyait de livrer l&rsquo;environnement de recette le 15 mars. L&rsquo;&eacute;quipe de tests devait commencer le 10 mars. Personne n&rsquo;avait not&eacute; le probl&egrave;me parce que personne n&rsquo;avait mis les deux plannings c&ocirc;te &agrave; c&ocirc;te.</p>
+        <div class="terrain-quote">
+          <p>Le DSI adjoint m&rsquo;a dit : &laquo;&nbsp;On a 15 &eacute;quipes, personne ne sait o&ugrave; on en est, et la date c&rsquo;est dans 5 mois.&nbsp;&raquo; J&rsquo;ai demand&eacute; le planning consolid&eacute;. Il n&rsquo;existait pas.</p>
+          <div class="quote-source">&mdash; Premier jour de mission</div>
+        </div>
+
+        <hr class="article-divider">
+
+        <div class="article-section">
+          <h2>Notre approche</h2>
+        </div>
+
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="process-step-num">1</div>
+            <h5>Unifier</h5>
+            <p>1 planning, toutes les d&eacute;pendances</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">2</div>
+            <h5>Risquer</h5>
+            <p>Identifier, qualifier, assigner chaque risque</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">3</div>
+            <h5>Coordonner</h5>
+            <p>COPIL, comit&eacute; projet, points quotidiens</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step-num">4</div>
+            <h5>R&eacute;p&eacute;ter</h5>
+            <p>Dry run complet avant la bascule r&eacute;elle</p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-step timeline-step--done">
+            <div class="timeline-period">Semaine 1-2</div>
+            <h4>Reprise en main &mdash; le planning qui dit la v&eacute;rit&eacute;</h4>
+            <p>Macro-planning unifi&eacute; avec toutes les d&eacute;pendances. 8 jalons critiques, 23 d&eacute;pendances inter-&eacute;quipes. D&eacute;couverte imm&eacute;diate : la recette devait d&eacute;marrer 5 jours avant que l&rsquo;infra ait fini de monter l&rsquo;environnement. Personne n&rsquo;avait vu le probl&egrave;me.</p>
+          </div>
+          <div class="timeline-step timeline-step--done">
+            <div class="timeline-period">Semaine 2</div>
+            <h4>Registre de risques</h4>
+            <p>14 risques identifi&eacute;s, dont 5 critiques. Pour chacun : un plan de mitigation et un responsable nomm&eacute;. Quand un risque est &eacute;crit avec un nom en face, il est trait&eacute;.</p>
+          </div>
+          <div class="timeline-step timeline-step--done">
+            <div class="timeline-period">Mois 1-3</div>
+            <h4>Coordination active</h4>
+            <p>COPIL direction bi-mensuel (15 min), comit&eacute; projet hebdo (45 min), point quotidien 10 min sur les phases cl&eacute;s. Dashboard d&rsquo;une page chaque semaine.</p>
+          </div>
+          <div class="timeline-step timeline-step--done">
+            <div class="timeline-period">Mois 4</div>
+            <h4>Dry run &mdash; r&eacute;p&eacute;tition g&eacute;n&eacute;rale</h4>
+            <p>Checklist 120 points, chacun assign&eacute; avec cr&eacute;neau horaire. Plan de rollback document&eacute; et test&eacute;. On a aussi test&eacute; le plan B.</p>
+          </div>
+          <div class="timeline-step timeline-step--done">
+            <div class="timeline-period">Mois 5</div>
+            <h4>Go-Live</h4>
+            <p>Bascule un week-end. 48h de surveillance. Lundi matin, 400 conseillers ouvrent le nouvel outil. Z&eacute;ro incident bloquant.</p>
+          </div>
+        </div>
+
+        <hr class="article-divider">
+
+        <div class="article-section">
+          <h2>Les livrables</h2>
         </div>
 
         <div class="deliverable">
-          <div class="deliverable-header">Extrait &mdash; Registre de risques (anonymis&eacute;)</div>
+          <div class="deliverable-header">Registre de risques (extrait)</div>
           <div class="deliverable-body">
             <table class="mock-table">
               <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Risque</th>
-                  <th>Impact</th>
-                  <th>Proba</th>
-                  <th>Mitigation</th>
-                  <th>Resp.</th>
-                  <th>Statut</th>
-                </tr>
+                <tr><th>ID</th><th>Risque</th><th>Impact</th><th>Proba</th><th>Mitigation</th><th>Resp.</th><th>Statut</th></tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>R-01</td>
-                  <td>Retard livraison env. recette par h&eacute;bergeur</td>
-                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td>
-                  <td>Moyen</td>
-                  <td>N&eacute;gocier livraison anticip&eacute;e, pr&eacute;voir env. temporaire</td>
-                  <td>DSI adj.</td>
+                  <td>R-01</td><td>Retard env. recette</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td><td>Moyen</td>
+                  <td>Livraison anticip&eacute;e n&eacute;goci&eacute;e</td><td>DSI adj.</td>
                   <td><span class="status-badge status-badge--green">Mitig&eacute;</span></td>
                 </tr>
                 <tr>
-                  <td>R-02</td>
-                  <td>Donn&eacute;es de migration incompl&egrave;tes</td>
-                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td>
-                  <td>&Eacute;lev&eacute;</td>
-                  <td>Dry run migration 3 sem. avant Go-Live</td>
-                  <td>&Eacute;q. data</td>
+                  <td>R-02</td><td>Donn&eacute;es migration incompl&egrave;tes</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td><td>&Eacute;lev&eacute;</td>
+                  <td>Dry run 3 sem. avant</td><td>&Eacute;q. data</td>
                   <td><span class="status-badge status-badge--green">Mitig&eacute;</span></td>
                 </tr>
                 <tr>
-                  <td>R-03</td>
-                  <td>R&eacute;sistance utilisateurs en agence</td>
-                  <td><span class="prio-dot prio-dot--high"></span>Majeur</td>
-                  <td>Moyen</td>
-                  <td>Communication anticip&eacute;e + formation pilote</td>
-                  <td>MOA</td>
-                  <td><span class="status-badge status-badge--blue">En cours</span></td>
-                </tr>
-                <tr>
-                  <td>R-04</td>
-                  <td>Certificats SSL non renouvel&eacute;s sur nouveau serveur</td>
-                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td>
-                  <td>Faible</td>
-                  <td>Check-list s&eacute;cu int&eacute;gr&eacute;e au dry run</td>
-                  <td>S&eacute;cu SI</td>
+                  <td>R-03</td><td>R&eacute;sistance utilisateurs</td>
+                  <td><span class="prio-dot prio-dot--high"></span>Majeur</td><td>Moyen</td>
+                  <td>Communication + formation pilote</td><td>MOA</td>
                   <td><span class="status-badge status-badge--green">Mitig&eacute;</span></td>
                 </tr>
                 <tr>
-                  <td>R-05</td>
-                  <td>Conflit de planning recette / migration infra</td>
-                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td>
-                  <td>&Eacute;lev&eacute;</td>
-                  <td>D&eacute;calage 10j n&eacute;goci&eacute; avec h&eacute;bergeur</td>
-                  <td>Chef projet</td>
+                  <td>R-04</td><td>Certificats SSL non renouvel&eacute;s</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td><td>Faible</td>
+                  <td>Check-list s&eacute;cu dans dry run</td><td>S&eacute;cu SI</td>
+                  <td><span class="status-badge status-badge--green">Mitig&eacute;</span></td>
+                </tr>
+                <tr>
+                  <td>R-05</td><td>Conflit planning recette / infra</td>
+                  <td><span class="prio-dot prio-dot--critical"></span>Critique</td><td>&Eacute;lev&eacute;</td>
+                  <td>D&eacute;calage 10j avec h&eacute;bergeur</td><td>Chef projet</td>
                   <td><span class="status-badge status-badge--green">Mitig&eacute;</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="deliverable-caption">Le registre de risques. Quand un risque est &eacute;crit noir sur blanc avec un nom en face, il est trait&eacute;. Quand il est dans la t&ecirc;te de quelqu'un, il est oubli&eacute;.</div>
-        </div>
-
-        <div class="article-section">
-          <h3>Le pilotage au quotidien : simple mais r&eacute;gulier</h3>
-          <p>On a mis en place un rythme simple :</p>
-          <ul>
-            <li><strong>Comit&eacute; de pilotage</strong> bi-mensuel avec la direction. 15 min, pas plus. Un tableau de bord d&rsquo;une page.</li>
-            <li><strong>Comit&eacute; projet</strong> hebdomadaire. 45 min avec toutes les &eacute;quipes.</li>
-            <li><strong>Point quotidien</strong> de 10 min avec les 3 &eacute;quipes les plus critiques pendant les phases cl&eacute;s.</li>
-          </ul>
-          <p>Le point cl&eacute; : chaque semaine, la direction avait un tableau de bord d&rsquo;une page. Avancement par jalon, risques actifs, d&eacute;cisions &agrave; prendre. Pas un deck de 30 slides &mdash; une page. Si tu peux pas r&eacute;sumer l&rsquo;&eacute;tat du projet en une page, c&rsquo;est que tu ne comprends pas ton projet.</p>
+          <div class="deliverable-caption">Quand un risque est &eacute;crit noir sur blanc avec un nom en face, il est trait&eacute;. Quand il est dans la t&ecirc;te de quelqu&rsquo;un, il est oubli&eacute;.</div>
         </div>
 
         <div class="deliverable">
-          <div class="deliverable-header">Extrait &mdash; Dashboard de pilotage hebdomadaire</div>
+          <div class="deliverable-header">Dashboard de pilotage hebdomadaire</div>
           <div class="deliverable-body">
             <div class="mock-kpi-row">
               <div class="mock-kpi">
@@ -174,101 +216,112 @@
             </div>
             <table class="mock-table">
               <thead>
-                <tr>
-                  <th>Jalon</th>
-                  <th>&Eacute;ch&eacute;ance</th>
-                  <th>Resp.</th>
-                  <th>Statut</th>
-                </tr>
+                <tr><th>Jalon</th><th>&Eacute;ch&eacute;ance</th><th>Resp.</th><th>Statut</th></tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Livraison env. recette</td>
-                  <td>25 f&eacute;vrier</td>
-                  <td>H&eacute;bergeur</td>
-                  <td><span class="status-badge status-badge--green">Fait</span></td>
-                </tr>
-                <tr>
-                  <td>Migration donn&eacute;es - dry run</td>
-                  <td>10 mars</td>
-                  <td>&Eacute;q. data</td>
-                  <td><span class="status-badge status-badge--green">Fait</span></td>
-                </tr>
-                <tr>
-                  <td>Campagne de recette</td>
-                  <td>15 mars - 5 avril</td>
-                  <td>MOA + QA</td>
-                  <td><span class="status-badge status-badge--green">Fait</span></td>
-                </tr>
-                <tr>
-                  <td>Homologation s&eacute;curit&eacute;</td>
-                  <td>8 avril</td>
-                  <td>S&eacute;cu SI</td>
-                  <td><span class="status-badge status-badge--green">Fait</span></td>
-                </tr>
-                <tr>
-                  <td>Formation conseillers (pilote)</td>
-                  <td>10-14 avril</td>
-                  <td>MOA</td>
-                  <td><span class="status-badge status-badge--green">Fait</span></td>
-                </tr>
-                <tr>
-                  <td>Dry run bascule</td>
-                  <td>18-19 avril</td>
-                  <td>Chef projet</td>
-                  <td><span class="status-badge status-badge--green">Fait</span></td>
-                </tr>
-                <tr>
-                  <td>Go-Live</td>
-                  <td>26-27 avril</td>
-                  <td>Tous</td>
-                  <td><span class="status-badge status-badge--blue">Planifi&eacute;</span></td>
-                </tr>
-                <tr>
-                  <td>Hypercare (support renforc&eacute;)</td>
-                  <td>28 avril - 9 mai</td>
-                  <td>Support + MOA</td>
-                  <td><span class="status-badge status-badge--gray">A venir</span></td>
-                </tr>
+                <tr><td>Livraison env. recette</td><td>25 f&eacute;vrier</td><td>H&eacute;bergeur</td><td><span class="status-badge status-badge--green">Fait</span></td></tr>
+                <tr><td>Dry run migration donn&eacute;es</td><td>10 mars</td><td>&Eacute;q. data</td><td><span class="status-badge status-badge--green">Fait</span></td></tr>
+                <tr><td>Campagne de recette</td><td>15 mars - 5 avril</td><td>MOA + QA</td><td><span class="status-badge status-badge--green">Fait</span></td></tr>
+                <tr><td>Homologation s&eacute;curit&eacute;</td><td>8 avril</td><td>S&eacute;cu SI</td><td><span class="status-badge status-badge--green">Fait</span></td></tr>
+                <tr><td>Formation pilote</td><td>10-14 avril</td><td>MOA</td><td><span class="status-badge status-badge--green">Fait</span></td></tr>
+                <tr><td>Dry run bascule</td><td>18-19 avril</td><td>Chef projet</td><td><span class="status-badge status-badge--green">Fait</span></td></tr>
+                <tr><td>Go-Live</td><td>26-27 avril</td><td>Tous</td><td><span class="status-badge status-badge--blue">Planifi&eacute;</span></td></tr>
+                <tr><td>Hypercare</td><td>28 avril - 9 mai</td><td>Support + MOA</td><td><span class="status-badge status-badge--gray">A venir</span></td></tr>
               </tbody>
             </table>
           </div>
-          <div class="deliverable-caption">Le dashboard qu'on envoie chaque semaine &agrave; la direction. Une page, les jalons, les risques, les d&eacute;cisions. C'est tout.</div>
+          <div class="deliverable-caption">Le dashboard envoy&eacute; chaque semaine &agrave; la direction. Une page, les jalons, les risques, les d&eacute;cisions. C&rsquo;est tout.</div>
         </div>
 
         <div class="article-section">
-          <h3>Le truc qui a tout chang&eacute; : anticiper le conflit de planning</h3>
-          <p>En construisant le planning unifi&eacute;, on a rep&eacute;r&eacute; que la migration infrastructure et la campagne de recette se chevauchaient. Concr&egrave;tement : l&rsquo;&eacute;quipe de tests devait tester sur un environnement que l&rsquo;infra &eacute;tait encore en train de monter. Recette sur du sable mouvant.</p>
-          <p>On a n&eacute;goci&eacute; un d&eacute;calage de 10 jours avec l&rsquo;h&eacute;bergeur. &Ccedil;a a co&ucirc;t&eacute; 2 r&eacute;unions et quelques mails. Si on avait d&eacute;couvert le probl&egrave;me le jour J, &ccedil;a aurait co&ucirc;t&eacute; le projet.</p>
-
-          <h3>Le Go-Live : pas de surprise parce qu&rsquo;on a r&eacute;p&eacute;t&eacute;</h3>
-          <p>Dry run complet 3 semaines avant. Checklist de 120 points &mdash; chacun assign&eacute; &agrave; quelqu&rsquo;un avec un cr&eacute;neau horaire. Plan de rollback document&eacute; et test&eacute; (parce que oui, on a aussi test&eacute; le plan B).</p>
-          <p>La bascule a eu lieu un week-end. 48h de surveillance. Lundi matin, 400 conseillers ouvrent le nouvel outil. Z&eacute;ro incident bloquant.</p>
+          <h3>Avancement par workstream</h3>
         </div>
 
-        <div class="article-section">
-          <h2>Le r&eacute;sultat</h2>
-          <div class="article-results">
-            <div class="article-result">
-              <div class="article-result-value">On time</div>
-              <div class="article-result-label">Livr&eacute; &agrave; la date, pas de demande de d&eacute;lai</div>
+        <div class="progress-group">
+          <div class="progress-item">
+            <div class="progress-item-header">
+              <span class="progress-item-label">Infrastructure &amp; environnements</span>
+              <span class="progress-item-value">100%</span>
             </div>
-            <div class="article-result">
-              <div class="article-result-value">0</div>
-              <div class="article-result-label">Incident bloquant post-migration</div>
+            <div class="progress-bar"><div class="progress-fill progress-fill--green" style="width: 100%;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item-header">
+              <span class="progress-item-label">Migration donn&eacute;es</span>
+              <span class="progress-item-value">100%</span>
             </div>
-            <div class="article-result">
-              <div class="article-result-value">100%</div>
-              <div class="article-result-label">P&eacute;rim&egrave;tre livr&eacute;</div>
+            <div class="progress-bar"><div class="progress-fill progress-fill--green" style="width: 100%;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item-header">
+              <span class="progress-item-label">Recette fonctionnelle</span>
+              <span class="progress-item-value">100%</span>
             </div>
+            <div class="progress-bar"><div class="progress-fill progress-fill--green" style="width: 100%;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item-header">
+              <span class="progress-item-label">S&eacute;curit&eacute; &amp; homologation</span>
+              <span class="progress-item-value">100%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill progress-fill--green" style="width: 100%;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item-header">
+              <span class="progress-item-label">Formation conseillers</span>
+              <span class="progress-item-value">85%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill progress-fill--blue" style="width: 85%;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-item-header">
+              <span class="progress-item-label">Bascule &amp; Go-Live</span>
+              <span class="progress-item-value">Pr&ecirc;t</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill progress-fill--accent" style="width: 90%;"></div></div>
           </div>
         </div>
 
+        <div class="callout callout--success">
+          <strong>Le truc qui a tout chang&eacute; :</strong>
+          En construisant le planning unifi&eacute;, on a rep&eacute;r&eacute; que la migration infra et la recette se chevauchaient. On a n&eacute;goci&eacute; un d&eacute;calage de 10 jours. 2 r&eacute;unions, quelques mails. Si on avait d&eacute;couvert le probl&egrave;me le jour J, &ccedil;a aurait co&ucirc;t&eacute; le projet.
+        </div>
+
+        <hr class="article-divider">
+
+        <div class="article-section">
+          <h2>Les r&eacute;sultats</h2>
+        </div>
+
+        <div class="article-results">
+          <div class="article-result">
+            <div class="article-result-value">On time</div>
+            <div class="article-result-label">Livr&eacute; &agrave; la date, pas de d&eacute;lai</div>
+          </div>
+          <div class="article-result">
+            <div class="article-result-value">0</div>
+            <div class="article-result-label">Incident bloquant post-migration</div>
+          </div>
+          <div class="article-result">
+            <div class="article-result-value">100%</div>
+            <div class="article-result-label">P&eacute;rim&egrave;tre livr&eacute;</div>
+          </div>
+        </div>
+
+        <hr class="article-divider">
+
         <div class="article-section">
           <h2>Ce qu&rsquo;on en retient</h2>
-          <p>Une migration, c&rsquo;est pas un projet technique. C&rsquo;est un projet de coordination. La techno, les &eacute;quipes savent faire. Ce qui manque presque toujours, c&rsquo;est quelqu&rsquo;un qui met les plannings bout &agrave; bout, qui rep&egrave;re les trous, et qui dit &laquo;&nbsp;attention, &ccedil;a va pas coller&nbsp;&raquo; avant que &ccedil;a p&egrave;te.</p>
-          <p>Le registre de risques, c&rsquo;est b&ecirc;te comme outil. Mais quand un risque est &eacute;crit noir sur blanc avec le nom de quelqu&rsquo;un en face, il est trait&eacute;. Quand il est dans la t&ecirc;te de quelqu&rsquo;un, il est oubli&eacute;.</p>
-          <p>Et le dry run : c&rsquo;est pas optionnel. C&rsquo;est comme une r&eacute;p&eacute;tition g&eacute;n&eacute;rale avant un concert. Le week-end de la migration s&rsquo;est bien pass&eacute; parce qu&rsquo;on l&rsquo;avait d&eacute;j&agrave; jou&eacute; une fois.</p>
+        </div>
+
+        <div class="callout callout--info">
+          <strong>Une migration, c&rsquo;est pas un projet technique. C&rsquo;est un projet de coordination.</strong>
+          La techno, les &eacute;quipes savent faire. Ce qui manque, c&rsquo;est quelqu&rsquo;un qui met les plannings bout &agrave; bout, rep&egrave;re les trous, et dit &laquo;&nbsp;attention, &ccedil;a va pas coller&nbsp;&raquo; avant que &ccedil;a p&egrave;te.
+        </div>
+
+        <div class="callout callout--warning">
+          <strong>Le dry run, c&rsquo;est pas optionnel.</strong>
+          C&rsquo;est comme une r&eacute;p&eacute;tition g&eacute;n&eacute;rale avant un concert. Le week-end de la migration s&rsquo;est bien pass&eacute; parce qu&rsquo;on l&rsquo;avait d&eacute;j&agrave; jou&eacute; une fois.
         </div>
 
       </div>

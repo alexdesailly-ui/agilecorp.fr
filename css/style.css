@@ -253,6 +253,26 @@ h4 { font-size: 1.125rem; }
   margin-left: 16px;
 }
 
+/* Language switcher */
+.nav-links a.lang-switch {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+}
+
+.nav-links a.lang-switch:hover {
+  color: var(--color-white);
+  border-color: var(--color-accent);
+}
+
+.nav-links a.lang-switch::after {
+  display: none;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;

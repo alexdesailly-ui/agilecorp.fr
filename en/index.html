@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Automatic redirect based on browser language (French speakers -> FR version) -->
+  <script>
+  (function () {
+    try {
+      var pref = localStorage.getItem('agc_lang');
+      if (pref === 'fr') { location.replace('/'); return; }
+      if (pref === 'en') { return; }
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      if (lang.indexOf('fr') === 0) { location.replace('/'); }
+    } catch (e) {}
+  })();
+  </script>
+  <meta name="description" content="AgileCorp &mdash; IT consulting firm: business analysis, QA, project management, agility and change management. Senior experts, zero bullshit.">
+  <meta name="keywords" content="consulting, business analysis, QA, project management, Scrum, change management, CIO, IT, Aix-en-Provence">
+  <meta name="author" content="AgileCorp">
+  <meta property="og:title" content="AgileCorp | IT Consulting &mdash; Business Analysis, QA, Project Management, Agility">
+  <meta property="og:description" content="IT consulting firm. Business analysis, QA, project management, Scrum and change management. Senior experts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://agilecorp.fr/en/">
+  <meta property="og:image" content="https://agilecorp.fr/logo-agile-corp.png">
+  <title>AgileCorp | IT Consulting &mdash; Business Analysis, QA, Project Management, Agility</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="fr" href="https://agilecorp.fr/">
+  <link rel="alternate" hreflang="en" href="https://agilecorp.fr/en/">
+  <link rel="alternate" hreflang="x-default" href="https://agilecorp.fr/">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../logo-agile-corp.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header header--transparent">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="../logo-agile-corp-blanc-baseline.png" alt="AgileCorp" class="logo-img">
+      </a>
+      <nav class="nav-links">
+        <a href="#expertise">Expertise</a>
+        <a href="#secteurs">Industries</a>
+        <a href="#cas">Results</a>
+        <a href="#terrain">Field notes</a>
+        <a href="#partenariats">Partners</a>
+        <a href="#carrieres">Careers</a>
+        <a href="/" class="lang-switch" data-set-lang="fr" hreflang="fr" aria-label="Passer en fran&ccedil;ais">FR</a>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let&rsquo;s talk</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Expert consulting firm</div>
+        <h1>Your <span class="accent">critical</span> projects.<br>Our <span class="accent">senior</span> experts.</h1>
+        <p class="hero-text">Business analysis, QA, project management, agility, change management. AgileCorp steps in where the stakes are highest and there&rsquo;s no room for error.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary btn-arrow">Talk to an expert</a>
+          <a href="#expertise" class="btn btn-secondary">Our expertise</a>
+        </div>
+      </div>
+      <div class="hero-metrics fade-in">
+        <div class="metric-card">
+          <div class="metric-value" data-count="100" data-suffix="%">0</div>
+          <div class="metric-label">Certified experts</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="10" data-suffix="+ yrs">0</div>
+          <div class="metric-label">Field experience</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="0" data-suffix="" data-prefix="">0</div>
+          <div class="metric-label">Generic profiles</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value" data-count="24" data-suffix="h">0</div>
+          <div class="metric-label">Response time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="container">
+      <span class="trust-label">Industries served</span>
+      <div class="trust-logos">
+        <span class="trust-logo">CAC 40</span>
+        <span class="trust-logo">Banking &amp; Insurance</span>
+        <span class="trust-logo">Public Sector</span>
+        <span class="trust-logo">Industry</span>
+        <span class="trust-logo">Telecoms</span>
+        <span class="trust-logo">Energy</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERTISE -->
+  <section class="section" id="expertise">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">What we do. Concretely.</h2>
+        <p class="section-subtitle">Five areas of intervention, one single goal: your projects delivered, by the book.</p>
+      </div>
+      <div class="services-grid stagger-children">
+
+        <div class="service-card fade-in">
+          <div class="service-icon">&#9670;</div>
+          <h3>Business Analysis</h3>
+          <p>Gathering and formalising your business needs. Functional specifications, scoping, the interface between business and IT.</p>
+          <div class="service-tags">
+            <span class="service-tag">Business needs</span>
+            <span class="service-tag">Specifications</span>
+            <span class="service-tag">Scoping</span>
+            <span class="service-tag">User Stories</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">&#9888;</div>
+          <h3>QA &amp; Test strategy</h3>
+          <p>Test plans, campaign management, QA team leadership. ISTQB certified. Quality is not optional.</p>
+          <div class="service-tags">
+            <span class="service-tag">ISTQB</span>
+            <span class="service-tag">Test plans</span>
+            <span class="service-tag">Acceptance testing</span>
+            <span class="service-tag">QA management</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">&#9881;</div>
+          <h3>IT project management</h3>
+          <p>Coordination, planning, budget tracking, reporting. From scoping to Go-Live, we manage and we deliver.</p>
+          <div class="service-tags">
+            <span class="service-tag">Project manager</span>
+            <span class="service-tag">PMO</span>
+            <span class="service-tag">Planning</span>
+            <span class="service-tag">Reporting</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">&#9889;</div>
+          <h3>Agility &amp; Scrum</h3>
+          <p>Setting up agile frameworks, team coaching, agile project scoping. PSM certified.</p>
+          <div class="service-tags">
+            <span class="service-tag">Scrum Master</span>
+            <span class="service-tag">PSM</span>
+            <span class="service-tag">Agile scoping</span>
+            <span class="service-tag">Coaching</span>
+          </div>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-icon">&#9878;</div>
+          <h3>Change management</h3>
+          <p>User support, large-scale tool rollouts, training, adoption. A tool is worthless without usage.</p>
+          <div class="service-tags">
+            <span class="service-tag">Adoption</span>
+            <span class="service-tag">Training</span>
+            <span class="service-tag">Rollout</span>
+            <span class="service-tag">Support</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Approach</span>
+        <h2 class="section-title">Four steps. Zero improvisation.</h2>
+      </div>
+      <div class="method-steps fade-in">
+        <div class="method-step">
+          <div class="step-number">01</div>
+          <h3>Diagnosis</h3>
+          <p>Fast immersion. Real stakes, identified risks, prioritised levers.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-number">02</div>
+          <h3>Strategy</h3>
+          <p>Clear roadmap, measurable milestones, aligned stakeholders.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-number">03</div>
+          <h3>Execution</h3>
+          <p>Embedded experts, continuous steering, full transparency.</p>
+        </div>
+        <div class="method-step">
+          <div class="step-number">04</div>
+          <h3>Impact</h3>
+          <p>Quantified results, transferred skills, guaranteed autonomy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATORS -->
+  <section class="section section--dark" id="difference">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Difference</span>
+        <h2 class="section-title">Not a staffing firm. Not a big consultancy. Not a freelancer.</h2>
+      </div>
+      <div class="diff-grid stagger-children">
+        <div class="diff-card fade-in">
+          <div class="diff-icon">&#9733;</div>
+          <h3>More expert than a staffing firm</h3>
+          <p>Zero generic profiles. Every consultant is a senior, certified domain expert.</p>
+          <p class="diff-versus">vs. staffing firms: juniors, turnover, diluted expertise</p>
+        </div>
+        <div class="diff-card fade-in">
+          <div class="diff-icon">&#9889;</div>
+          <h3>More agile than a big consultancy</h3>
+          <p>Lean teams, direct access to seniors, decisions within 24h.</p>
+          <p class="diff-versus">vs. big consultancies: hierarchy layers, high costs</p>
+        </div>
+        <div class="diff-card fade-in">
+          <div class="diff-icon">&#9879;</div>
+          <h3>More reliable than a freelancer</h3>
+          <p>A lasting structure, backup capacity, strong contractual commitment.</p>
+          <p class="diff-versus">vs. freelancers: individual risk, no backup</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section" id="secteurs">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Industries</span>
+        <h2 class="section-title">Your business challenges, our playing field</h2>
+      </div>
+      <div class="sectors-grid stagger-children">
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#127974;</div>
+          <h3>Banking &amp; Finance</h3>
+          <p>Core banking, compliance, open banking, IT modernisation.</p>
+        </div>
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#128737;</div>
+          <h3>Insurance</h3>
+          <p>IT transformation, digital journeys, tool rollouts, Solvency II.</p>
+        </div>
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#127963;</div>
+          <h3>Public Sector</h3>
+          <p>Interministerial programmes, digital identity, dematerialisation.</p>
+        </div>
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#9881;</div>
+          <h3>Industry &amp; Energy</h3>
+          <p>Industrial project management, supply chain, IT modernisation.</p>
+        </div>
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#128225;</div>
+          <h3>Telecoms</h3>
+          <p>Convergence, IT transformation, network projects, quality.</p>
+        </div>
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#128722;</div>
+          <h3>Retail</h3>
+          <p>Unified commerce, IT projects, tool rollouts.</p>
+        </div>
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#128138;</div>
+          <h3>Healthcare</h3>
+          <p>Patient journeys, IT interoperability, change management.</p>
+        </div>
+        <div class="sector-card fade-in">
+          <div class="sector-icon">&#9992;</div>
+          <h3>Transport</h3>
+          <p>Project management, tool rollouts, software quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT CASES -->
+  <section class="section section--gray" id="cas">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Results</span>
+        <h2 class="section-title">What counts: the numbers</h2>
+      </div>
+      <div class="cases-grid">
+
+        <div class="case-card fade-in">
+          <div class="case-header">
+            <span class="case-sector">Banking</span>
+            <h3>Business analysis and acceptance testing on a banking IT overhaul</h3>
+            <p class="case-context">Incomplete specifications, disorganised acceptance testing, go-live postponed twice.</p>
+          </div>
+          <div class="case-body">
+            <div class="case-solution">
+              <h4>Our intervention</h4>
+              <p>Rebuilt the functional specs, a complete test strategy, full management of acceptance testing.</p>
+            </div>
+          </div>
+          <div class="case-results">
+            <div class="case-result">
+              <div class="case-result-value">-60%</div>
+              <div class="case-result-label">Production defects</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">100%</div>
+              <div class="case-result-label">Test cases executed</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">On time</div>
+              <div class="case-result-label">Go-Live</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card fade-in">
+          <div class="case-header">
+            <span class="case-sector">Insurance</span>
+            <h3>Rolling out a business tool to 3,000 users</h3>
+            <p class="case-context">A new claims management tool. Untrained users, strong resistance to change.</p>
+          </div>
+          <div class="case-body">
+            <div class="case-solution">
+              <h4>Our intervention</h4>
+              <p>Change management plan, training in waves, on-the-ground support, adoption metrics.</p>
+            </div>
+          </div>
+          <div class="case-results">
+            <div class="case-result">
+              <div class="case-result-value">92%</div>
+              <div class="case-result-label">Adoption rate</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">3,000</div>
+              <div class="case-result-label">Users trained</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">-40%</div>
+              <div class="case-result-label">Support tickets</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card fade-in">
+          <div class="case-header">
+            <span class="case-sector">Banking</span>
+            <h3>Managing a critical application migration</h3>
+            <p class="case-context">Migrating a critical application to a new platform. Tight deadlines, multiple stakeholders.</p>
+          </div>
+          <div class="case-body">
+            <div class="case-solution">
+              <h4>Our intervention</h4>
+              <p>Project management, team coordination, risk tracking, executive reporting.</p>
+            </div>
+          </div>
+          <div class="case-results">
+            <div class="case-result">
+              <div class="case-result-value">On time</div>
+              <div class="case-result-label">Delivery</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">0</div>
+              <div class="case-result-label">Post-release incidents</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">100%</div>
+              <div class="case-result-label">Scope delivered</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card fade-in">
+          <div class="case-header">
+            <span class="case-sector">Services</span>
+            <h3>Introducing an agile approach on a struggling project</h3>
+            <p class="case-context">A waterfall project, accumulated delays, no visibility for the business.</p>
+          </div>
+          <div class="case-body">
+            <div class="case-solution">
+              <h4>Our intervention</h4>
+              <p>Agile scoping, Scrum setup, team coaching, ceremonies and backlog.</p>
+            </div>
+          </div>
+          <div class="case-results">
+            <div class="case-result">
+              <div class="case-result-value">-50%</div>
+              <div class="case-result-label">Delivery cycle</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">+35%</div>
+              <div class="case-result-label">Business satisfaction</div>
+            </div>
+            <div class="case-result">
+              <div class="case-result-value">Bi-weekly</div>
+              <div class="case-result-label">Delivery cadence</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FIELD NOTES -->
+  <section class="section" id="terrain">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Field notes</span>
+        <h2 class="section-title">The messes we&rsquo;ve actually lived through (and how we got out)</h2>
+        <p class="section-subtitle">Real projects, anonymised, with the real problems and the real deliverables. No fluff. <em>(Articles in French.)</em></p>
+      </div>
+      <div class="insights-grid stagger-children">
+
+        <a href="../articles/recette-refonte-si-bancaire.html" class="insight-card fade-in">
+          <div class="insight-tag">Business Analysis / QA</div>
+          <h3>The day we inherited acceptance testing with defects tracked on Post-its</h3>
+          <p>No test plan, specs full of holes, bugs tracked by email. We put the tooling in place and rebuilt everything.</p>
+          <div class="insight-meta">
+            <span>Banking</span>
+            <span>4 months</span>
+          </div>
+          <span class="insight-link">Read the story &rarr;</span>
+        </a>
+
+        <a href="../articles/deploiement-3000-utilisateurs.html" class="insight-card fade-in">
+          <div class="insight-tag">Change management</div>
+          <h3>&ldquo;It was better before&rdquo; &mdash; rolling out a tool when nobody wants it</h3>
+          <p>3,000 users, a 45-minute e-learning as the only training, and case handlers switching back to the old tool the moment they can.</p>
+          <div class="insight-meta">
+            <span>Insurance</span>
+            <span>6 months</span>
+          </div>
+          <span class="insight-link">Read the story &rarr;</span>
+        </a>
+
+        <a href="../articles/sauver-projet-agile.html" class="insight-card fade-in">
+          <div class="insight-tag">Agility / Scrum</div>
+          <h3>10 months of dev, 40% delivered, the business saw nothing &mdash; welcome to waterfall</h3>
+          <p>A 180-page spec, zero feedback, a team in the fog. We brought in Scrum, first results within 3 sprints.</p>
+          <div class="insight-meta">
+            <span>Services</span>
+            <span>8 months</span>
+          </div>
+          <span class="insight-link">Read the story &rarr;</span>
+        </a>
+
+        <a href="../articles/migration-applicative-critique.html" class="insight-card fade-in">
+          <div class="insight-tag">Project management</div>
+          <h3>15 stakeholders, a non-negotiable date and nobody to coordinate</h3>
+          <p>Migrating a critical app, every team with its own plan, none of them lining up. Spoiler: we delivered on time.</p>
+          <div class="insight-meta">
+            <span>Banking</span>
+            <span>5 months</span>
+          </div>
+          <span class="insight-link">Read the story &rarr;</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIPS -->
+  <section class="section" id="partenariats">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Partners</span>
+        <h2 class="section-title">Staffing firms, integrators: reinforce your teams</h2>
+        <p class="section-subtitle">Sharp expertise as backup, white-label available, zero competition on your accounts.</p>
+      </div>
+      <div class="partner-content">
+        <div class="partner-text fade-in-left">
+          <h3>What we bring</h3>
+          <div class="partner-benefits">
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">&#9733;</div>
+              <div>
+                <h4>Operational experts from day one</h4>
+                <p>Senior profiles (10+ years), zero ramp-up.</p>
+              </div>
+            </div>
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">&#128200;</div>
+              <div>
+                <h4>Bid support</h4>
+                <p>Business analysis, QA and project management expertise to strengthen your proposals.</p>
+              </div>
+            </div>
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">&#129309;</div>
+              <div>
+                <h4>Full flexibility</h4>
+                <p>Time &amp; materials, fixed price, commando mode. White-label if needed.</p>
+              </div>
+            </div>
+            <div class="partner-benefit">
+              <div class="partner-benefit-icon">&#128736;</div>
+              <div>
+                <h4>Safety net</h4>
+                <p>Project going off the rails? We step in within 48h.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-dark btn-arrow">Become a partner</a>
+        </div>
+        <div class="partner-scenarios fade-in-right">
+          <h3>Real-world cases</h3>
+          <div class="scenario">
+            <h4>Programme in trouble</h4>
+            <p>Need a programme director urgently. On-site within 48h, experts seasoned in turnarounds.</p>
+          </div>
+          <div class="scenario">
+            <h4>Business analysis / QA backup</h4>
+            <p>Need ISTQB-certified business analysis or QA profiles for a client project. Consultants operational immediately.</p>
+          </div>
+          <div class="scenario">
+            <h4>Agile transition</h4>
+            <p>Moving to Scrum on a client project. PSM-certified Scrum Masters to support the transformation.</p>
+          </div>
+          <div class="scenario">
+            <h4>Pre-Go-Live audit</h4>
+            <p>Go-Live in 3 months, risks not under control. Flash audit and an immediate remediation plan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREERS -->
+  <section class="section section--dark" id="carrieres">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Careers</span>
+        <h2 class="section-title">The best projects for the best experts</h2>
+        <p class="section-subtitle">No bench. No projects you didn&rsquo;t choose. No pointless hierarchy.</p>
+      </div>
+      <div class="careers-content">
+        <div class="fade-in-left">
+          <div class="careers-values">
+            <div class="value-item">
+              <h4>Maximum impact</h4>
+              <p>Critical programmes, strategic stakes, C-level visibility.</p>
+            </div>
+            <div class="value-item">
+              <h4>Autonomy</h4>
+              <p>You choose your assignments. Remote work. Organise yourself freely.</p>
+            </div>
+            <div class="value-item">
+              <h4>Compensation</h4>
+              <p>Matching your value. No rigid pay grid.</p>
+            </div>
+            <div class="value-item">
+              <h4>Community</h4>
+              <p>High-calibre peers. Sharing, skills growth.</p>
+            </div>
+          </div>
+        </div>
+        <div class="careers-profiles fade-in-right">
+          <h3>Profiles we&rsquo;re looking for</h3>
+          <div class="profile-card">
+            <h4>Business Analyst</h4>
+            <p>5+ years. Requirements gathering, functional specs, business/IT interface.</p>
+            <div class="profile-tags">
+              <span class="profile-tag">Business Analysis</span>
+              <span class="profile-tag">Requirements</span>
+              <span class="profile-tag">Scoping</span>
+            </div>
+          </div>
+          <div class="profile-card">
+            <h4>QA Manager / Test Lead</h4>
+            <p>5+ years. Test strategy, campaign management, ISTQB certification.</p>
+            <div class="profile-tags">
+              <span class="profile-tag">QA</span>
+              <span class="profile-tag">ISTQB</span>
+              <span class="profile-tag">Acceptance testing</span>
+            </div>
+          </div>
+          <div class="profile-card">
+            <h4>IT Project Manager</h4>
+            <p>5+ years. Steering, coordination, reporting, budget tracking.</p>
+            <div class="profile-tags">
+              <span class="profile-tag">PMO</span>
+              <span class="profile-tag">Planning</span>
+              <span class="profile-tag">Delivery</span>
+            </div>
+          </div>
+          <div class="profile-card">
+            <h4>Scrum Master</h4>
+            <p>5+ years. Agile scoping, team coaching, continuous improvement. PSM.</p>
+            <div class="profile-tags">
+              <span class="profile-tag">Scrum</span>
+              <span class="profile-tag">PSM</span>
+              <span class="profile-tag">Agile</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-arrow" style="margin-top: 24px;">Apply</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Contact</span>
+        <h2>Let&rsquo;s talk about your project</h2>
+        <p class="cta-text">CIO, programme director, staffing firm or consultant: a reply within 24h from a senior expert.</p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form fade-in-left" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">First name</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label for="nom">Last name</label>
+              <input type="text" id="nom" name="nom" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="first.last@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Phone</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="+33 6 XX XX XX XX">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="societe">Company</label>
+            <input type="text" id="societe" name="societe" placeholder="Your company">
+          </div>
+          <div class="form-group">
+            <label for="objet">Subject</label>
+            <select id="objet" name="objet" required>
+              <option value="" disabled selected>Select</option>
+              <option value="mission">Assignment / Project</option>
+              <option value="partenariat">Partnership</option>
+              <option value="candidature">Job application</option>
+              <option value="autre">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Describe your need..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-arrow" style="width: 100%; justify-content: center;">Send</button>
+        </form>
+        <div class="contact-info fade-in-right">
+          <h3>Direct access</h3>
+          <p>No salesperson, no chatbot. A senior expert who understands your challenges.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128231;</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:alexandre@agilecorp.fr" style="color: var(--color-text-light);">alexandre@agilecorp.fr</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128222;</div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+33699182270" style="color: var(--color-text-light);">+33 6 99 18 22 70</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128172;</div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p><a href="https://wa.me/33699182270" target="_blank" style="color: var(--color-text-light);">Message us</a></p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128205;</div>
+            <div>
+              <h4>Offices</h4>
+              <p>Aix-en-Provence, France</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">&#128279;</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="https://fr.linkedin.com/company/ades-it" target="_blank" style="color: var(--color-text-light);">Follow us</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="../logo-agile-corp-blanc-baseline.png" alt="AgileCorp" class="logo-img">
+          </a>
+          <p>IT consulting firm: business analysis, QA, project management, agility and change management.</p>
+        </div>
+        <div>
+          <h4>Expertise</h4>
+          <ul>
+            <li><a href="#expertise">Business Analysis</a></li>
+            <li><a href="#expertise">QA &amp; Test strategy</a></li>
+            <li><a href="#expertise">IT project management</a></li>
+            <li><a href="#expertise">Agility &amp; Scrum</a></li>
+            <li><a href="#expertise">Change management</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Firm</h4>
+          <ul>
+            <li><a href="#difference">Why AgileCorp</a></li>
+            <li><a href="#secteurs">Industries</a></li>
+            <li><a href="#cas">Results</a></li>
+            <li><a href="#terrain">Field notes</a></li>
+            <li><a href="#partenariats">Partners</a></li>
+            <li><a href="#carrieres">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:alexandre@agilecorp.fr">alexandre@agilecorp.fr</a></li>
+            <li><a href="tel:+33699182270">+33 6 99 18 22 70</a></li>
+            <li><a href="https://wa.me/33699182270" target="_blank">WhatsApp</a></li>
+            <li>Aix-en-Provence, France</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AgileCorp. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://fr.linkedin.com/company/ades-it" target="_blank" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

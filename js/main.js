@@ -97,6 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   counters.forEach(c => counterObserver.observe(c));
 
+  // --- Language preference (manual switch overrides auto-detection) ---
+  document.querySelectorAll('[data-set-lang]').forEach(el => {
+    el.addEventListener('click', () => {
+      try { localStorage.setItem('agc_lang', el.getAttribute('data-set-lang')); } catch (e) {}
+    });
+  });
+
   // --- Form handling ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
@@ -110,20 +117,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const objet = document.getElementById('objet').value;
       const message = document.getElementById('message').value;
 
+      const isEN = (document.documentElement.lang || 'fr').toLowerCase().indexOf('en') === 0;
+      const labels = isEN
+        ? { name: 'Name', email: 'Email', phone: 'Phone', company: 'Company', subject: 'Subject', message: 'Message', redirect: 'Redirecting to your email app...' }
+        : { name: 'Nom', email: 'Email', phone: 'Telephone', company: 'Societe', subject: 'Objet', message: 'Message', redirect: 'Redirection vers votre messagerie...' };
+
       const subject = encodeURIComponent('[AgileCorp] ' + objet + ' - ' + prenom + ' ' + nom);
       const body = encodeURIComponent(
-        'Nom : ' + prenom + ' ' + nom + '\n' +
-        'Email : ' + email + '\n' +
-        'Telephone : ' + telephone + '\n' +
-        'Societe : ' + societe + '\n' +
-        'Objet : ' + objet + '\n\n' +
-        'Message :\n' + message
+        labels.name + ' : ' + prenom + ' ' + nom + '\n' +
+        labels.email + ' : ' + email + '\n' +
+        labels.phone + ' : ' + telephone + '\n' +
+        labels.company + ' : ' + societe + '\n' +
+        labels.subject + ' : ' + objet + '\n\n' +
+        labels.message + ' :\n' + message
       );
       window.location.href = 'mailto:alexandre@agilecorp.fr?subject=' + subject + '&body=' + body;
 
       const btn = contactForm.querySelector('.btn');
       const originalText = btn.textContent;
-      btn.textContent = 'Redirection vers votre messagerie...';
+      btn.textContent = labels.redirect;
       btn.style.background = '#2ecc71';
       setTimeout(() => {
         btn.textContent = originalText;

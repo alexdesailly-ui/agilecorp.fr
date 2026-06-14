@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Redirection automatique selon la langue du navigateur (visiteurs non francophones -> version EN) -->
+  <script>
+  (function () {
+    try {
+      var pref = localStorage.getItem('agc_lang');
+      if (pref === 'en') { location.replace('/en/'); return; }
+      if (pref === 'fr') { return; }
+      var lang = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+      if (lang.indexOf('fr') !== 0) { location.replace('/en/'); }
+    } catch (e) {}
+  })();
+  </script>
   <meta name="description" content="AgileCorp &mdash; Cabinet de conseil IT : AMOA, QA, pilotage de projets, agilit&eacute; et conduite du changement. Experts confirm&eacute;s, z&eacute;ro bullshit.">
   <meta name="keywords" content="conseil, AMOA, QA, pilotage projet, Scrum, conduite du changement, DSI, consulting, Aix-en-Provence">
   <meta name="author" content="AgileCorp">
@@ -15,6 +27,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="alternate" hreflang="fr" href="https://agilecorp.fr/">
+  <link rel="alternate" hreflang="en" href="https://agilecorp.fr/en/">
+  <link rel="alternate" hreflang="x-default" href="https://agilecorp.fr/">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="logo-agile-corp.png">
 </head>
@@ -33,6 +48,7 @@
         <a href="#terrain">Terrain</a>
         <a href="#partenariats">Partenaires</a>
         <a href="#carrieres">Carri&egrave;res</a>
+        <a href="/en/" class="lang-switch" data-set-lang="en" hreflang="en" aria-label="Switch to English">EN</a>
         <a href="#contact" class="btn btn-primary btn-sm nav-cta">Parlons-en</a>
       </nav>
       <button class="nav-toggle" aria-label="Menu">

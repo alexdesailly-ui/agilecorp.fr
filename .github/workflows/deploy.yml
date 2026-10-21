@@ -32,3 +32,4 @@ jobs:
             .nojekyll
             CNAME
             SHRIMP.ttf
+            CLAUDE.md

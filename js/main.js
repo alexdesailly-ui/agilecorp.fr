@@ -98,37 +98,55 @@ document.addEventListener('DOMContentLoaded', () => {
   counters.forEach(c => counterObserver.observe(c));
 
   // --- Form handling ---
+  // Envoi via contact.php (Hostinger). Repli sur mailto si le serveur ne répond pas.
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const startedAt = Date.now();
+    const track = (name, data) => { if (window.agileTrack) window.agileTrack(name, data); };
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const prenom = document.getElementById('prenom').value;
-      const nom = document.getElementById('nom').value;
-      const email = document.getElementById('email').value;
-      const telephone = document.getElementById('telephone').value;
-      const societe = document.getElementById('societe').value;
-      const objet = document.getElementById('objet').value;
-      const message = document.getElementById('message').value;
-
-      const subject = encodeURIComponent('[AgileCorp] ' + objet + ' - ' + prenom + ' ' + nom);
-      const body = encodeURIComponent(
-        'Nom : ' + prenom + ' ' + nom + '\n' +
-        'Email : ' + email + '\n' +
-        'Telephone : ' + telephone + '\n' +
-        'Societe : ' + societe + '\n' +
-        'Objet : ' + objet + '\n\n' +
-        'Message :\n' + message
-      );
-      window.location.href = 'mailto:alexandre@agilecorp.fr?subject=' + subject + '&body=' + body;
-
-      const btn = contactForm.querySelector('.btn');
+      const btn = contactForm.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
-      btn.textContent = 'Redirection vers votre messagerie...';
-      btn.style.background = '#2ecc71';
+      const fd = new FormData(contactForm);
+      fd.append('t', String(startedAt));
+      fd.append('source', document.referrer || location.href);
+
+      btn.disabled = true;
+      btn.textContent = 'Envoi en cours...';
+
+      let sent = false;
+      try {
+        const res = await fetch('contact.php', { method: 'POST', body: fd });
+        const json = await res.json();
+        sent = res.ok && json.ok;
+      } catch (err) { sent = false; }
+
+      if (sent) {
+        track('lead-formulaire', { objet: fd.get('objet') });
+        contactForm.reset();
+        btn.textContent = 'Message reçu, réponse sous 24h';
+        btn.style.background = '#2ecc71';
+      } else {
+        track('lead-formulaire-repli-mailto', { objet: fd.get('objet') });
+        const subject = encodeURIComponent('[AgileCorp] ' + fd.get('objet') + ' - ' + fd.get('prenom') + ' ' + fd.get('nom'));
+        const body = encodeURIComponent(
+          'Nom : ' + fd.get('prenom') + ' ' + fd.get('nom') + '\n' +
+          'Email : ' + fd.get('email') + '\n' +
+          'Telephone : ' + fd.get('telephone') + '\n' +
+          'Societe : ' + fd.get('societe') + '\n' +
+          'Objet : ' + fd.get('objet') + '\n\n' +
+          'Message :\n' + fd.get('message')
+        );
+        window.location.href = 'mailto:alexandre@agilecorp.fr?subject=' + subject + '&body=' + body;
+        btn.textContent = 'Redirection vers votre messagerie...';
+      }
+
       setTimeout(() => {
+        btn.disabled = false;
         btn.textContent = originalText;
         btn.style.background = '';
-      }, 3000);
+      }, 5000);
     });
   }
 

@@ -7,7 +7,7 @@
    Tant que l'ID est vide, rien n'est chargé ni envoyé.
    ============================================ */
 (function () {
-  var UMAMI_WEBSITE_ID = ''; // <-- coller ici le Website ID Umami
+  var UMAMI_WEBSITE_ID = '76bec1f1-543e-4d8d-9b9c-f3755b1a743f'; // <-- coller ici le Website ID Umami
   var UMAMI_SRC = 'https://cloud.umami.is/script.js';
 
   var queue = [];
